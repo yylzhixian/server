@@ -199,7 +199,7 @@ int insertUser(sqlite3 *db, pUser user) {
     strcat(sql, user->password);
     strcat(sql, "','");
     strcat(sql, user->idcard);
-    strcat(sql, "','0','");
+    strcat(sql, "','1','");
     strcat(sql, token);
     strcat(sql, "');");
     rc = sqlite3_exec(db, sql, incallback, 0, &errmsg);
